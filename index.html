@@ -371,7 +371,7 @@
                             class="timeline-dot absolute -left-[11px] flex items-center justify-center w-6 h-6 bg-cyan-500 rounded-full ring-8 ring-slate-900"></span>
                         <div class="bg-slate-800 p-6 rounded-lg shadow-lg ring-1 ring-slate-700 hover:ring-cyan-400/50 hover:shadow-cyan-500/20 transition-all duration-300">
                             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2">
-                                <h3 class="text-xl font-bold text-white">Senior Software Engineer @ Phenom People</h3>
+                                <h3 class="text-xl font-bold text-white">Software Engineer @ Phenom People</h3>
                                 <time class="sm:ml-4 text-sm font-normal leading-none text-slate-400">May 2021 -
                                     Present</time>
                             </div>
@@ -444,10 +444,12 @@
             </div>
         </section>
 
+        <section id="projects" class="py-16 sm:py-24">
+            <div class="max-w-7xl mx-auto">
                 <h2
                     class="section-title text-3xl font-bold tracking-tight text-white sm:text-4xl mb-16 text-center relative"
                     data-aos="fade-down">
-                    Featured AI Project
+                    Featured AI Projects
                 </h2>
 
                 <!-- Featured Project Card: Enterprise Troubleshooting Copilot -->
@@ -639,6 +641,198 @@
                                 <span class="flex items-center gap-2">
                                     <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 4.9L10 1.154 17.834 4.9A2 2 0 0119 6.74v5.39a8 8 0 01-3.897 6.86L10 22.38l-5.103-3.39A8 8 0 011 12.13V6.74a2 2 0 011.166-1.84zM10 10a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm0-4a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
                                     Offline Resilient architecture
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Project Card: Knowledge Factory -->
+                <div class="mb-20 bg-slate-800/40 rounded-2xl border border-slate-700/60 p-6 md:p-10 shadow-2xl backdrop-blur-sm relative overflow-hidden transition-all duration-300 hover:border-cyan-400/30" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Glow decoration -->
+                    <div class="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                        <!-- Left Column: Summary and Navigation -->
+                        <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                            <div>
+                                <span class="px-3 py-1 text-xs font-semibold uppercase tracking-wider text-cyan-400 bg-cyan-400/10 rounded-full border border-cyan-400/20 inline-block mb-4">
+                                    Core Infrastructure
+                                </span>
+                                <h3 class="text-3xl font-extrabold text-white tracking-tight mb-2">
+                                    Knowledge Factory
+                                </h3>
+                                <p class="text-lg text-cyan-400/90 font-medium mb-4">
+                                    Enterprise RAG Data Platform
+                                </p>
+                                <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                    An end-to-end AI knowledge preparation pipeline that converts raw, unstructured enterprise JSON datasets into RAG-ready semantic search indexes, validation trees, and unified API endpoints.
+                                </p>
+                            </div>
+
+                            <!-- Tabs Switcher (Vertical on desktop, scrollable row on mobile) -->
+                            <div class="flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible gap-2 pb-2 lg:pb-0 scrollbar-none border-b lg:border-b-0 border-slate-700/50">
+                                <button onclick="switchFactoryTab('overview')" id="factory-btn-overview" class="factory-tab-btn flex-shrink-0 text-left px-4 py-3 rounded-lg border-l-2 border-cyan-400 text-cyan-400 bg-slate-700/50 transition-all duration-200 text-xs md:text-sm font-semibold flex items-center gap-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    Overview & Context
+                                </button>
+                                <button onclick="switchFactoryTab('pipeline')" id="factory-btn-pipeline" class="factory-tab-btn flex-shrink-0 text-left px-4 py-3 rounded-lg border-l-2 border-transparent text-slate-400 hover:text-white hover:bg-slate-700/30 transition-all duration-200 text-xs md:text-sm font-semibold flex items-center gap-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                                    Data Pipeline Flow
+                                </button>
+                                <button onclick="switchFactoryTab('features')" id="factory-btn-features" class="factory-tab-btn flex-shrink-0 text-left px-4 py-3 rounded-lg border-l-2 border-transparent text-slate-400 hover:text-white hover:bg-slate-700/30 transition-all duration-200 text-xs md:text-sm font-semibold flex items-center gap-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
+                                    Key Capabilities
+                                </button>
+                                <button onclick="switchFactoryTab('tech')" id="factory-btn-tech" class="factory-tab-btn flex-shrink-0 text-left px-4 py-3 rounded-lg border-l-2 border-transparent text-slate-400 hover:text-white hover:bg-slate-700/30 transition-all duration-200 text-xs md:text-sm font-semibold flex items-center gap-3">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                    Stack & Integration
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Interactive Content Display -->
+                        <div class="lg:col-span-7 bg-slate-900/50 rounded-xl border border-slate-700/40 p-6 flex flex-col justify-between min-h-[380px]">
+                            <!-- Tab: Overview -->
+                            <div id="factory-overview" class="factory-tab-content transition-all duration-300 opacity-100">
+                                <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> Context & Problem
+                                </h4>
+                                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                                    Ingesting and preprocessing complex raw enterprise JSON datasets presents substantial data engineering challenges. Raw data is often malformed, lacks search-optimized semantic boundaries, contains duplicate logs, and lacks clean metadata classifications, which severely limits search accuracy.
+                                </p>
+                                <div class="bg-red-500/5 border border-red-500/10 rounded-lg p-3.5 mb-4 text-xs text-slate-300">
+                                    <strong class="text-red-400 block mb-1">Retrieval Gap:</strong>
+                                    Traditional simple keyword lookups fail to map semantic query intents, resulting in empty responses or hallucinated answers from LLM generation layers.
+                                </div>
+                                <h4 class="text-lg font-bold text-white mb-3 flex items-center gap-2">
+                                    <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span> Platform Solution
+                                </h4>
+                                <p class="text-sm text-slate-300 leading-relaxed">
+                                    The pipeline parses JSON inputs, runs validation schemas, applies semantic boundary chunking, extracts hierarchical metadata, generates dense vector representations, and registers indexes in a hybrid retrieval store.
+                                </p>
+                            </div>
+
+                            <!-- Tab: Pipeline -->
+                            <div id="factory-pipeline" class="factory-tab-content transition-all duration-300 opacity-0 hidden">
+                                <h4 class="text-lg font-bold text-white mb-3">AI Ingestion & Preparation Pipeline</h4>
+                                <div class="space-y-3 relative before:absolute before:top-2 before:bottom-2 before:left-[15px] before:w-0.5 before:bg-slate-700">
+                                    <!-- Step 1 -->
+                                    <div class="relative pl-8 flex items-start group">
+                                        <div class="absolute left-0 w-8 h-8 rounded-full bg-cyan-950 border border-cyan-500/50 text-cyan-400 flex items-center justify-center text-xs font-bold transition-all group-hover:scale-110">1</div>
+                                        <div>
+                                            <span class="text-xs font-semibold text-cyan-300 uppercase tracking-wider">Validation</span>
+                                            <h5 class="text-sm font-bold text-white">Ingestion & Validation</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed">Parses bulk enterprise JSON documents and enforces strict schema structure checks via Pydantic validator models.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Step 2 -->
+                                    <div class="relative pl-8 flex items-start group">
+                                        <div class="absolute left-0 w-8 h-8 rounded-full bg-cyan-950 border border-cyan-500/50 text-cyan-400 flex items-center justify-center text-xs font-bold transition-all group-hover:scale-110">2</div>
+                                        <div>
+                                            <span class="text-xs font-semibold text-cyan-300 uppercase tracking-wider">Chunking</span>
+                                            <h5 class="text-sm font-bold text-white">Semantic Chunking & Metadata</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed">Splits long text logs using contextual, token-aware boundaries while appending category, date, and user role metadata taggings.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Step 3 -->
+                                    <div class="relative pl-8 flex items-start group">
+                                        <div class="absolute left-0 w-8 h-8 rounded-full bg-indigo-950 border border-indigo-500/50 text-indigo-300 flex items-center justify-center text-xs font-bold transition-all group-hover:scale-110">3</div>
+                                        <div>
+                                            <span class="text-xs font-semibold text-indigo-300 uppercase tracking-wider">Embeddings</span>
+                                            <h5 class="text-sm font-bold text-white">Vector Ingestion & Indexing</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed">Requests high-dimensional dense embeddings via OpenAI Embeddings API, registering index vectors and building inverted BM25 lookup indices.</p>
+                                        </div>
+                                    </div>
+                                    <!-- Step 4 -->
+                                    <div class="relative pl-8 flex items-start group">
+                                        <div class="absolute left-0 w-8 h-8 rounded-full bg-emerald-950 border border-emerald-500/50 text-emerald-400 flex items-center justify-center text-xs font-bold transition-all group-hover:scale-110">4</div>
+                                        <div>
+                                            <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">APIs</span>
+                                            <h5 class="text-sm font-bold text-white">Exposing Downstream APIs</h5>
+                                            <p class="text-xs text-slate-400 leading-relaxed">Exposes high-speed query REST endpoints inside FastAPI, enabling the downstream agents of the Troubleshooting Copilot to pull facts in real-time.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Features -->
+                            <div id="factory-features" class="factory-tab-content transition-all duration-300 opacity-0 hidden">
+                                <h4 class="text-lg font-bold text-white mb-4">Key Capabilities & Features</h4>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div class="p-3 bg-slate-900/80 rounded-lg border border-slate-800 hover:border-cyan-400/20 transition-colors">
+                                        <h5 class="text-sm font-bold text-white mb-1 flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                            Hybrid Search (Vector + BM25)
+                                        </h5>
+                                        <p class="text-xs text-slate-400">Combines dense neural semantic similarities with sparse keyword lookups to ensure no knowledge is missed.</p>
+                                    </div>
+                                    <div class="p-3 bg-slate-900/80 rounded-lg border border-slate-800 hover:border-cyan-400/20 transition-colors">
+                                        <h5 class="text-sm font-bold text-white mb-1 flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138z"></path></svg>
+                                            Schema Validation Guards
+                                        </h5>
+                                        <p class="text-xs text-slate-400">Prevents index pollution by verifying data formats and filtering malformed elements before embeddings occur.</p>
+                                    </div>
+                                    <div class="p-3 bg-slate-900/80 rounded-lg border border-slate-800 hover:border-cyan-400/20 transition-colors">
+                                        <h5 class="text-sm font-bold text-white mb-1 flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                            Granular Metadata Tagging
+                                        </h5>
+                                        <p class="text-xs text-slate-400">Extracts and appends system classifications to enable downstream LLM agents to execute filtered searches.</p>
+                                    </div>
+                                    <div class="p-3 bg-slate-900/80 rounded-lg border border-slate-800 hover:border-cyan-400/20 transition-colors">
+                                        <h5 class="text-sm font-bold text-white mb-1 flex items-center gap-2">
+                                            <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                                            Agent-Ready REST Endpoints
+                                        </h5>
+                                        <p class="text-xs text-slate-400">High-throughput FastAPI endpoints designed to stream retrieved facts directly to LLM context windows.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tab: Tech Stack -->
+                            <div id="factory-tech" class="factory-tab-content transition-all duration-300 opacity-0 hidden">
+                                <h4 class="text-lg font-bold text-white mb-4">Technology Stack & Integration</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">Ingestion & Validation</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 bg-cyan-950 text-cyan-300 border border-cyan-800/40 rounded text-xs font-semibold">Python</span>
+                                            <span class="px-2.5 py-1 bg-cyan-950 text-cyan-300 border border-cyan-800/40 rounded text-xs font-semibold">Pydantic</span>
+                                            <span class="px-2.5 py-1 bg-cyan-950 text-cyan-300 border border-cyan-800/40 rounded text-xs font-semibold">JSON Validation Schema</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">RAG Core Engine</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 bg-indigo-950 text-indigo-300 border border-indigo-800/40 rounded text-xs font-semibold">OpenAI Embeddings</span>
+                                            <span class="px-2.5 py-1 bg-indigo-950 text-indigo-300 border border-indigo-800/40 rounded text-xs font-semibold">BM25 Similarity Search</span>
+                                            <span class="px-2.5 py-1 bg-indigo-950 text-indigo-300 border border-indigo-800/40 rounded text-xs font-semibold">Vector Indexing</span>
+                                            <span class="px-2.5 py-1 bg-indigo-950 text-indigo-300 border border-indigo-800/40 rounded text-xs font-semibold">Cosine Similarities</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider block mb-2">API Services & Clients</span>
+                                        <div class="flex flex-wrap gap-2">
+                                            <span class="px-2.5 py-1 bg-emerald-950 text-emerald-300 border border-emerald-800/40 rounded text-xs font-semibold">FastAPI</span>
+                                            <span class="px-2.5 py-1 bg-emerald-950 text-emerald-300 border border-emerald-800/40 rounded text-xs font-semibold">Uvicorn</span>
+                                            <span class="px-2.5 py-1 bg-emerald-950 text-emerald-300 border border-emerald-800/40 rounded text-xs font-semibold">HTTPX API Client</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Footer note in card -->
+                            <div class="mt-6 pt-4 border-t border-slate-800/80 flex flex-wrap gap-x-6 gap-y-2 text-xs text-slate-400 justify-between items-center">
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                                    Indexed 1,300+ Enterprise Documents
+                                </span>
+                                <span class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-cyan-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path></svg>
+                                    Powers downstream Copilot Agent REST APIs
                                 </span>
                             </div>
                         </div>
@@ -925,6 +1119,38 @@
             
             // Highlight selected tab button
             const targetBtn = document.getElementById(`copilot-btn-${tabId}`);
+            if (targetBtn) {
+                targetBtn.classList.remove('border-transparent', 'text-slate-400');
+                targetBtn.classList.add('border-cyan-400', 'text-cyan-400', 'bg-slate-700/50');
+            }
+        };
+
+        // Tab Switcher for Knowledge Factory
+        window.switchFactoryTab = function(tabId) {
+            // Hide all tab content elements
+            document.querySelectorAll('.factory-tab-content').forEach(el => {
+                el.classList.add('hidden', 'opacity-0');
+                el.classList.remove('opacity-100');
+            });
+            // Reset all tab button styles
+            document.querySelectorAll('.factory-tab-btn').forEach(btn => {
+                btn.classList.remove('border-cyan-400', 'text-cyan-400', 'bg-slate-700/50');
+                btn.classList.add('border-transparent', 'text-slate-400');
+            });
+            
+            // Show selected tab content
+            const targetContent = document.getElementById(`factory-${tabId}`);
+            if (targetContent) {
+                targetContent.classList.remove('hidden');
+                // Allow browser to register layout before setting opacity
+                setTimeout(() => {
+                    targetContent.classList.remove('opacity-0');
+                    targetContent.classList.add('opacity-100');
+                }, 20);
+            }
+            
+            // Highlight selected tab button
+            const targetBtn = document.getElementById(`factory-btn-${tabId}`);
             if (targetBtn) {
                 targetBtn.classList.remove('border-transparent', 'text-slate-400');
                 targetBtn.classList.add('border-cyan-400', 'text-cyan-400', 'bg-slate-700/50');
